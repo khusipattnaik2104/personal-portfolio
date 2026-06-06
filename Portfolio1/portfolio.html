@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
+</head>
+<body>
+
+    <div class="particles"></div>
+
+    <header>
+        <nav>
+            <h2 class="logo">Portfolio</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Ananya</span></h1>
+            <h2>Frontend Developer</h2>
+            <p>Creating Modern and Interactive Web Experiences</p>
+            <button>Explore More</button>
+        </div>
+
+        <div class="hero-image">
+            <div class="cube">
+                <div class="face front">HTML</div>
+                <div class="face back">CSS</div>
+                <div class="face right">JS</div>
+                <div class="face left">React</div>
+                <div class="face top">python</div>
+        
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="glass-card">
+            <h2>About Me</h2>
+            <p>
+                Passionate developer focused on building modern,
+                responsive and visually stunning web applications.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Angular</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">Python</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Student Portal</h3>
+                <p>Modern dashboard with animations.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>cyber security dashboard</h3>
+                <p>Morden dashboard with real time data.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Hospital Management</h3>
+                <p>Modern hospital management platform.</p>
+            </div>
+            <div class="project-card">
+                <h3>personal portfolio</h3>
+                <p>explore about me</p>
+            </div>
+            <section class="contact">
+                <h2>let's connect</h2>
+                <form class="contactform">
+                    <input type="text" class="name" placeholder="your name" required>
+                    <input type="email" class="email" placeholder="your email" required>
+                    <input type="tel" class="phone" placeholder="your phone number" required>
+                    <textarea class="message" row="5" placeholder="your messages" required></textarea>
+                    <button type="=submit">send message</button>
+                 </form>
+                 <div class="success message">
+                 </div>
+            </section>
+
+        </div>
+    </section>
+
+</body>
+</html>

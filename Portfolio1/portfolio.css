@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    position:fixed;
+    width:100%;
+    z-index:100;
+}
+
+.logo{
+    font-size:30px;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:100px 10%;
+}
+
+.hero-content h1{
+    font-size:4rem;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content h2{
+    margin:10px 0;
+    color:#94a3b8;
+}
+
+.hero-content button{
+    margin-top:20px;
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.hero-content button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px #38bdf8;
+}
+
+/* 3D Cube */
+
+.hero-image{
+    perspective:1000px;
+}
+
+.cube{
+    position:relative;
+    width:200px;
+    height:200px;
+    transform-style:preserve-3d;
+    animation:rotate 10s infinite linear;
+}
+
+.face{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(255,255,255,0.08);
+    border:2px solid #38bdf8;
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.front{transform:translateZ(100px);}
+.back{transform:rotateY(180deg) translateZ(100px);}
+.right{transform:rotateY(90deg) translateZ(100px);}
+.left{transform:rotateY(-90deg) translateZ(100px);}
+.top{transform:rotateX(90deg) translateZ(100px);}
+.bottom{transform:rotateX(-90deg) translateZ(100px);}
+
+@keyframes rotate{
+    from{
+        transform:rotateX(0) rotateY(0);
+    }
+    to{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Glass Card */
+
+.glass-card{
+    width:80%;
+    margin:100px auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    text-align:center;
+    transition:.5s;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 40px #38bdf8;
+}
+
+/* Skills */
+
+#skills{
+    text-align:center;
+    padding:80px 10%;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.skill-card{
+    padding:40px;
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.skill-card:hover{
+    transform:rotateY(20deg) scale(1.1);
+    box-shadow:0 0 30px #38bdf8;
+}
+
+/* Projects */
+
+#projects{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.project-card{
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+    transition:.5s;
+}
+/* Styling for the overall contact section container */
+.contact {
+  padding: 40px 20px; /* Optional spacing around the section */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the entire contact block horizontally */
+}
+
+/* Specific styling for the 'let's connect' header */
+.contact h2 {
+  font-family: inherit; /* Use same font as rest of the page */
+  font-weight: 600;
+  color: inherit; /* or specify your default font color */
+  margin-bottom: 25px; /* Spacing below header */
+  text-transform: lowercase; /* Matches the text style in the HTML */
+}
+
+/* Container for the form itself */
+.contactform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Consistent spacing between all inputs and the button */
+  width: 100%; /* Force full width on smaller screens */
+  max-width: 450px; /* Limits maximum width on larger screens for neatness */
+}
+
+/* Combined styling for all input types and the textarea */
+.contactform input,
+.contactform textarea {
+  width: 100%; /* Make everything fill the container's width */
+  padding: 12px 15px; /* Padding for better typing experience */
+  background-color: #fff; /* Solid white background for clear input */
+  border: 1px solid #d1d5db; /* Subtle border for definition */
+  border-radius: 6px; /* Smooth corners */
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box; /* Crucial: padding does not affect the width */
+}
+
+/* Additional styling specific to the textarea */
+.contactform textarea {
+  min-height: 120px; /* Default height */
+  resize: vertical; /* Allow resizing, but only up/down, to maintain layout */
+}
+
+/* Styling for the submit button */
+.contactform button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #007bff; /* Add your preferred primary action color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: lowercase; /* To match the 'send message' text */
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.contactform button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
